@@ -1,2 +1,1 @@
-# SPDTST
-Localization for SpeedTest scripts
+# Localization for SpeedTest scripts
