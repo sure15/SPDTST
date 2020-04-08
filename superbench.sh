@@ -145,14 +145,14 @@ benchinit() {
 	# install speedtest-cli
 	if  [ ! -e 'speedtest.py' ]; then
 		echo " Installing Speedtest-cli ..."
-		wget --no-check-certificate https://msoayu56.com/files/speedtest/speedtest.py > /dev/null 2>&1
+		wget --no-check-certificate https://raw.githubusercontent.com/yzlijie/SPDTST/master/speedtest.py > /dev/null 2>&1
 	fi
 	chmod a+rx speedtest.py
 	
 	# install speedtest-cli(original version)
 	if  [ ! -e 'speedtest_original.py' ]; then
 		echo " Installing speedtest-cli(original version) ..."
-		wget --no-check-certificate https://msoayu56.com/files/speedtest/speedtest_original.py > /dev/null 2>&1
+		wget --no-check-certificate https://raw.githubusercontent.com/yzlijie/SPDTST/master/speedtest_original.py > /dev/null 2>&1
 	fi
 	chmod a+rx speedtest.py
 
@@ -611,7 +611,7 @@ print_intro() {
 	printf ' Superbench.sh -- https://www.oldking.net/350.html\n' | tee -a $log
 	printf " Mode  : \e${GREEN}%s\e${PLAIN}    Version : \e${GREEN}%s${PLAIN}\n" $mode_name 1.1.6 | tee -a $log
 	printf ' Usage : wget -qO- git.io/superbench.sh | bash\n' | tee -a $log
-	printf ' Fixed bugs version usage : wget -qO- msoayu56.com/files/speedtest/superbench.sh | bash\n' | tee -a $log
+	printf ' Fixed bugs version usage : wget -qO- raw.githubusercontent.com/yzlijie/SPDTST/master/superbench.sh | bash\n' | tee -a $log
 	printf ' Fixed version 2\n' | tee -a $log
 }
 
