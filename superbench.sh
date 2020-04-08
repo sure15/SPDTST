@@ -642,7 +642,7 @@ sharetest() {
 log_preupload() {
 	log_up="$HOME/superbench_upload.log"
 	true > $log_up
-	$(cat superbench.log 2>&1 | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" > $log_up)
+	$(cat bench.log 2>&1 | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" > $log_up)
 }
 
 get_ip_whois_org_name(){
@@ -718,7 +718,7 @@ fast_bench(){
 
 
 
-log="$HOME/superbench.log"
+log="$HOME/bench.log"
 true > $log
 
 case $1 in
