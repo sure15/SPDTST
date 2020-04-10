@@ -142,19 +142,19 @@ benchinit() {
 	#	fi      
 	#fi
 
-	# install speedtest-cli
+	#install speedtest-cli
 	if  [ ! -e 'speedtest.py' ]; then
 		echo " Installing Speedtest-cli ..."
 		wget --no-check-certificate https://raw.githubusercontent.com/yzlijie/SPDTST/master/speedtest.py > /dev/null 2>&1
 	fi
 	chmod a+rx speedtest.py
 	
-	# install speedtest-cli(original version)
+	#install speedtest-cli(original version)
 	if  [ ! -e 'speedtest_original.py' ]; then
 		echo " Installing speedtest-cli(original version) ..."
 		wget --no-check-certificate https://raw.githubusercontent.com/yzlijie/SPDTST/master/speedtest_original.py > /dev/null 2>&1
 	fi
-	chmod a+rx speedtest.py
+	chmod a+rx speedtest_original.py
 
 
 	# install tools.py
@@ -253,7 +253,7 @@ print_speedtest() {
 	speed_test '26404' 'Hefei 5G     CM'
 	speed_test '28491' 'Changsha 5G  CM'
 	 
-	rm -rf speedtest.py
+	rm -rf speedtest*.py
 }
 
 print_speedtest_fast() {
@@ -264,7 +264,7 @@ print_speedtest_fast() {
 	speed_test '24447' 'ShangHai 5G  CU'
 	speed_test '27249' 'Nanjing 5G   CM'
 	 
-	rm -rf speedtest.py
+	rm -rf speedtest*.py
 }
 
 speed_fast_com() {
@@ -611,8 +611,6 @@ print_intro() {
 	printf ' Superbench.sh -- https://www.oldking.net/350.html\n' | tee -a $log
 	printf " Mode  : \e${GREEN}%s\e${PLAIN}    Version : \e${GREEN}%s${PLAIN}\n" $mode_name 1.1.6 | tee -a $log
 	printf ' Usage : wget -qO- git.io/superbench.sh | bash\n' | tee -a $log
-	printf ' Fixed bugs version usage : wget -qO- raw.githubusercontent.com/yzlijie/SPDTST/master/superbench.sh | bash\n' | tee -a $log
-	printf ' Fixed version 2\n' | tee -a $log
 }
 
 sharetest() {
@@ -666,7 +664,7 @@ pingtest() {
 
 cleanup() {
 	rm -f test_file_*;
-	rm -f speedtest.py;
+	rm -f speedtest*.py;
 	rm -f fast_com*;
 	rm -f tools.py;
 	rm -f ip_json.json
