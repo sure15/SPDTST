@@ -21,7 +21,7 @@ about() {
 	echo " ========================================================= "
 	echo " \                 Superbench.sh  Script                 / "
 	echo " \       Basic system info, I/O test and speedtest       / "
-	echo " \                   v1.1.6 (25 Nov 2019)                / "
+	echo " \                   v1.1.6.1 (April 2020)                / "
 	echo " \                   Created by Oldking                  / "
 	echo " ========================================================= "
 	echo ""
